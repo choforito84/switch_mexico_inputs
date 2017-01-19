@@ -1,3 +1,4 @@
 fuel	co2_intensity	upstream_co2_intensity
-coal	0.09552		0
-diesel	0.07316445	0	
+coal	0.09552	0
+diesel	0.07316445	0
+natural_gas	0	0
