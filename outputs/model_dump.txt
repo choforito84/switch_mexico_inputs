@@ -9,8 +9,8 @@
         ['coal', 'diesel', 'natural_gas', 'wind']
     ENERGY_SOURCES_index_init : Dim=0, Dimen=1, Size=4, Domain=None, Ordered=False, Bounds=None
         Virtual
-    EXISTING_PROJ_BUILDYEARS : Dim=0, Dimen=2, Size=0, Domain=None, Ordered=False, Bounds=None
-        []
+    EXISTING_PROJ_BUILDYEARS : Dim=0, Dimen=2, Size=2, Domain=None, Ordered=False, Bounds=None
+        [('industrial_caborca_u1', 2015), ('mexico_gcoradora_de_energia', 2015)]
     Energy_Balance_index : Dim=0, Dimen=2, Size=8, Domain=None, Ordered=False, Bounds=None
         Virtual
     FUELS : Dim=0, Dimen=1, Size=3, Domain=None, Ordered=False, Bounds=None
@@ -79,22 +79,24 @@
           4 : ['industrial_caborca_u1', 'mexico_gcoradora_de_energia']
     PROJECTS_CAP_LIMITED : Dim=0, Dimen=1, Size=2, Domain=PROJECTS, Ordered=False, Bounds=None
         ['industrial_caborca_u1', 'mexico_gcoradora_de_energia']
-    PROJECT_BUILDS_OPERATIONAL_PERIODS : Dim=2, Dimen=1, Size=6, Domain=PERIODS, ArraySize=4, Ordered=Insertion, Bounds=None
+    PROJECT_BUILDS_OPERATIONAL_PERIODS : Dim=2, Dimen=1, Size=10, Domain=PERIODS, ArraySize=6, Ordered=Insertion, Bounds=None
         Key                                   : Members
+              ('industrial_caborca_u1', 2015) : [2025, 2020]
               ('industrial_caborca_u1', 2020) : [2025, 2020]
               ('industrial_caborca_u1', 2025) : [2025]
+        ('mexico_gcoradora_de_energia', 2015) : [2025, 2020]
         ('mexico_gcoradora_de_energia', 2020) : [2025, 2020]
         ('mexico_gcoradora_de_energia', 2025) : [2025]
-    PROJECT_BUILDYEARS : Dim=0, Dimen=2, Size=4, Domain=None, Ordered=False, Bounds=None
-        [('industrial_caborca_u1', 2020), ('industrial_caborca_u1', 2025), ('mexico_gcoradora_de_energia', 2020), ('mexico_gcoradora_de_energia', 2025)]
+    PROJECT_BUILDYEARS : Dim=0, Dimen=2, Size=6, Domain=None, Ordered=False, Bounds=None
+        [('industrial_caborca_u1', 2015), ('industrial_caborca_u1', 2020), ('industrial_caborca_u1', 2025), ('mexico_gcoradora_de_energia', 2015), ('mexico_gcoradora_de_energia', 2020), ('mexico_gcoradora_de_energia', 2025)]
     PROJECT_OPERATIONAL_PERIODS : Dim=0, Dimen=2, Size=4, Domain=None, Ordered=False, Bounds=None
         [('industrial_caborca_u1', 2020), ('industrial_caborca_u1', 2025), ('mexico_gcoradora_de_energia', 2020), ('mexico_gcoradora_de_energia', 2025)]
-    PROJECT_PERIOD_ONLINE_BUILD_YRS : Dim=2, Dimen=1, Size=6, Domain=None, ArraySize=4, Ordered=False, Bounds=None
+    PROJECT_PERIOD_ONLINE_BUILD_YRS : Dim=2, Dimen=1, Size=10, Domain=None, ArraySize=4, Ordered=False, Bounds=None
         Key                                   : Members
-              ('industrial_caborca_u1', 2020) : [2020]
-              ('industrial_caborca_u1', 2025) : [2020, 2025]
-        ('mexico_gcoradora_de_energia', 2020) : [2020]
-        ('mexico_gcoradora_de_energia', 2025) : [2020, 2025]
+              ('industrial_caborca_u1', 2020) : [2015, 2020]
+              ('industrial_caborca_u1', 2025) : [2015, 2020, 2025]
+        ('mexico_gcoradora_de_energia', 2020) : [2015, 2020]
+        ('mexico_gcoradora_de_energia', 2025) : [2015, 2020, 2025]
     PROJECT_PERIOD_ONLINE_BUILD_YRS_index : Dim=0, Dimen=2, Size=4, Domain=None, Ordered=False, Bounds=None
         Virtual
     PROJ_DISPATCH_POINTS : Dim=0, Dimen=2, Size=8, Domain=None, Ordered=False, Bounds=None
@@ -279,10 +281,12 @@
         Key                         : Value
               industrial_caborca_u1 :  1000
         mexico_gcoradora_de_energia :  1000
-    proj_capital_cost_annual : Size=4, Index=PROJECT_BUILDYEARS, Domain=Any, Default=None, Mutable=False
+    proj_capital_cost_annual : Size=6, Index=PROJECT_BUILDYEARS, Domain=Any, Default=None, Mutable=False
         Key                                   : Value
+              ('industrial_caborca_u1', 2015) : 88568.3256061
               ('industrial_caborca_u1', 2020) : 95418.1699045
               ('industrial_caborca_u1', 2025) : 95418.1699045
+        ('mexico_gcoradora_de_energia', 2015) : 103742.356252
         ('mexico_gcoradora_de_energia', 2020) : 188639.259273
         ('mexico_gcoradora_de_energia', 2025) : 188639.259273
     proj_connect_cost_per_mw : Size=2, Index=PROJECTS, Domain=NonNegativeReals, Default=None, Mutable=False
@@ -291,16 +295,22 @@
         mexico_gcoradora_de_energia : 99048
     proj_dbid : Size=2, Index=PROJECTS, Domain=Any, Default=(function), Mutable=False
         Key : Value
-    proj_existing_cap : Size=0, Index=EXISTING_PROJ_BUILDYEARS, Domain=NonNegativeReals, Default=None, Mutable=False
-        Key : Value
-    proj_final_period : Size=4, Index=PROJECT_BUILDYEARS, Domain=Any, Default=None, Mutable=False
+    proj_existing_cap : Size=2, Index=EXISTING_PROJ_BUILDYEARS, Domain=NonNegativeReals, Default=None, Mutable=False
         Key                                   : Value
+              ('industrial_caborca_u1', 2015) :   950
+        ('mexico_gcoradora_de_energia', 2015) :   950
+    proj_final_period : Size=6, Index=PROJECT_BUILDYEARS, Domain=Any, Default=None, Mutable=False
+        Key                                   : Value
+              ('industrial_caborca_u1', 2015) :  2025
               ('industrial_caborca_u1', 2020) :  2025
               ('industrial_caborca_u1', 2025) :  2025
+        ('mexico_gcoradora_de_energia', 2015) :  2025
         ('mexico_gcoradora_de_energia', 2020) :  2025
         ('mexico_gcoradora_de_energia', 2025) :  2025
-    proj_fixed_om : Size=4, Index=PROJECT_BUILDYEARS, Domain=NonNegativeReals, Default=(function), Mutable=False
-        Key : Value
+    proj_fixed_om : Size=6, Index=PROJECT_BUILDYEARS, Domain=NonNegativeReals, Default=(function), Mutable=False
+        Key                                   : Value
+              ('industrial_caborca_u1', 2015) :     0
+        ('mexico_gcoradora_de_energia', 2015) :     0
     proj_forced_outage_rate : Size=2, Index=PROJECTS, Domain=PercentFraction, Default=(function), Mutable=False
         Key : Value
     proj_full_load_heat_rate : Size=2, Index=FUEL_BASED_PROJECTS, Domain=PositiveReals, Default=(function), Mutable=False
@@ -317,8 +327,10 @@
         mexico_gcoradora_de_energia :    02-cananea
     proj_max_capacity_factor : Size=0, Index=VAR_DISPATCH_POINTS, Domain=Reals, Default=None, Mutable=False
         Key : Value
-    proj_overnight_cost : Size=4, Index=PROJECT_BUILDYEARS, Domain=NonNegativeReals, Default=(function), Mutable=False
-        Key : Value
+    proj_overnight_cost : Size=6, Index=PROJECT_BUILDYEARS, Domain=NonNegativeReals, Default=(function), Mutable=False
+        Key                                   : Value
+              ('industrial_caborca_u1', 2015) : 1000000
+        ('mexico_gcoradora_de_energia', 2015) : 1000000
     proj_scheduled_outage_rate : Size=2, Index=PROJECTS, Domain=PercentFraction, Default=(function), Mutable=False
         Key : Value
     proj_variable_om : Size=2, Index=PROJECTS, Domain=NonNegativeReals, Default=(function), Mutable=False
@@ -395,11 +407,13 @@
 6 Var Declarations
     BaseloadOperatingLevelForPeriod : Size=0, Index=BaseloadOperatingLevelForPeriod_index
         Key : Lower : Value : Upper : Fixed : Stale : Domain
-    BuildProj : Size=4, Index=PROJECT_BUILDYEARS
+    BuildProj : Size=6, Index=PROJECT_BUILDYEARS
         Key                                   : Lower : Value         : Upper : Fixed : Stale : Domain
-              ('industrial_caborca_u1', 2020) :     0 : 953.212232169 :  1000 : False : False : NonNegativeReals
+              ('industrial_caborca_u1', 2015) :   950 :         950.0 :   950 : False : False : NonNegativeReals
+              ('industrial_caborca_u1', 2020) :     0 : 3.21223216931 :  1000 : False : False : NonNegativeReals
               ('industrial_caborca_u1', 2025) :     0 :           0.0 :  1000 : False : False : NonNegativeReals
-        ('mexico_gcoradora_de_energia', 2020) :     0 : 246.438123504 :  1000 : False : False : NonNegativeReals
+        ('mexico_gcoradora_de_energia', 2015) :   950 :         950.0 :   950 : False : False : NonNegativeReals
+        ('mexico_gcoradora_de_energia', 2020) :     0 :           0.0 :  1000 : False : False : NonNegativeReals
         ('mexico_gcoradora_de_energia', 2025) :     0 :           0.0 :  1000 : False : False : NonNegativeReals
     DispatchProj : Size=8, Index=PROJ_DISPATCH_POINTS
         Key                                : Lower : Value       : Upper : Fixed : Stale : Domain
@@ -447,14 +461,14 @@
         ('mexico_gcoradora_de_energia', 4, 'coal') : 0.09552 * ProjFuelUseRate[mexico_gcoradora_de_energia,4,coal]
     DispatchUpperLimit : Size=8, Index=PROJ_DISPATCH_POINTS
         Key                                : Expression
-              ('industrial_caborca_u1', 1) : 0.945 * BuildProj[industrial_caborca_u1,2020]
-              ('industrial_caborca_u1', 2) : 0.945 * BuildProj[industrial_caborca_u1,2020]
-              ('industrial_caborca_u1', 3) : 0.945 * ( BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020] )
-              ('industrial_caborca_u1', 4) : 0.945 * ( BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020] )
-        ('mexico_gcoradora_de_energia', 1) : 0.936 * BuildProj[mexico_gcoradora_de_energia,2020]
-        ('mexico_gcoradora_de_energia', 2) : 0.936 * BuildProj[mexico_gcoradora_de_energia,2020]
-        ('mexico_gcoradora_de_energia', 3) : 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020] )
-        ('mexico_gcoradora_de_energia', 4) : 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020] )
+              ('industrial_caborca_u1', 1) : 0.945 * ( BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015] )
+              ('industrial_caborca_u1', 2) : 0.945 * ( BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015] )
+              ('industrial_caborca_u1', 3) : 0.945 * ( BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015] )
+              ('industrial_caborca_u1', 4) : 0.945 * ( BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015] )
+        ('mexico_gcoradora_de_energia', 1) : 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015] )
+        ('mexico_gcoradora_de_energia', 2) : 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015] )
+        ('mexico_gcoradora_de_energia', 3) : 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015] )
+        ('mexico_gcoradora_de_energia', 4) : 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015] )
     LZ_NetDispatch : Size=8, Index=LZ_NetDispatch_index
         Key                  : Expression
         ('01-hermosillo', 1) :       DispatchProj[industrial_caborca_u1,1]
@@ -467,10 +481,10 @@
            ('02-cananea', 4) : DispatchProj[mexico_gcoradora_de_energia,4]
     ProjCapacity : Size=4, Index=ProjCapacity_index
         Key                                   : Expression
-              ('industrial_caborca_u1', 2020) : BuildProj[industrial_caborca_u1,2020]
-              ('industrial_caborca_u1', 2025) : BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020]
-        ('mexico_gcoradora_de_energia', 2020) : BuildProj[mexico_gcoradora_de_energia,2020]
-        ('mexico_gcoradora_de_energia', 2025) : BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020]
+              ('industrial_caborca_u1', 2020) : BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015]
+              ('industrial_caborca_u1', 2025) : BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015]
+        ('mexico_gcoradora_de_energia', 2020) : BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015]
+        ('mexico_gcoradora_de_energia', 2025) : BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015]
     ProjCapacityTP : Size=8, Index=PROJ_DISPATCH_POINTS
         Key                                : Expression
               ('industrial_caborca_u1', 1) :       ProjCapacity[industrial_caborca_u1,2020]
@@ -483,10 +497,10 @@
         ('mexico_gcoradora_de_energia', 4) : ProjCapacity[mexico_gcoradora_de_energia,2025]
     Proj_Fixed_Costs_Annual : Size=4, Index=PROJECT_OPERATIONAL_PERIODS
         Key                                   : Expression
-              ('industrial_caborca_u1', 2020) : 115476.169905 * BuildProj[industrial_caborca_u1,2020]
-              ('industrial_caborca_u1', 2025) : 115476.169905*BuildProj[industrial_caborca_u1,2025] + 115476.169905*BuildProj[industrial_caborca_u1,2020]
-        ('mexico_gcoradora_de_energia', 2020) : 225102.259273 * BuildProj[mexico_gcoradora_de_energia,2020]
-        ('mexico_gcoradora_de_energia', 2025) : 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2025]
+              ('industrial_caborca_u1', 2020) : 115476.169905*BuildProj[industrial_caborca_u1,2020] + 88568.3256061*BuildProj[industrial_caborca_u1,2015]
+              ('industrial_caborca_u1', 2025) : 115476.169905*BuildProj[industrial_caborca_u1,2020] + 88568.3256061*BuildProj[industrial_caborca_u1,2015] + 115476.169905*BuildProj[industrial_caborca_u1,2025]
+        ('mexico_gcoradora_de_energia', 2020) : 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 103742.356252*BuildProj[mexico_gcoradora_de_energia,2015]
+        ('mexico_gcoradora_de_energia', 2025) : 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 103742.356252*BuildProj[mexico_gcoradora_de_energia,2015] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2025]
     Proj_Var_Costs_Hourly : Size=8, Index=PROJ_DISPATCH_POINTS
         Key                                : Expression
               ('industrial_caborca_u1', 1) : 3.432 * DispatchProj[industrial_caborca_u1,1]
@@ -499,15 +513,15 @@
         ('mexico_gcoradora_de_energia', 4) : 3.05 * DispatchProj[mexico_gcoradora_de_energia,4]
     SystemCost : Size=1, Index=None
         Key  : Expression
-        None : 4.12331111489 * ( 225102.259273 * BuildProj[mexico_gcoradora_de_energia,2020] + 115476.169905 * BuildProj[industrial_caborca_u1,2020] + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,1] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,1] ) + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,2] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,2] ) ) + 3.230722151 * ( 115476.169905*BuildProj[industrial_caborca_u1,2025] + 115476.169905*BuildProj[industrial_caborca_u1,2020] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2025] + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,3] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,3] ) + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,4] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,4] ) )
+        None : 4.12331111489 * ( 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 103742.356252*BuildProj[mexico_gcoradora_de_energia,2015] + 115476.169905*BuildProj[industrial_caborca_u1,2020] + 88568.3256061*BuildProj[industrial_caborca_u1,2015] + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,1] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,1] ) + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,2] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,2] ) ) + 3.230722151 * ( 115476.169905*BuildProj[industrial_caborca_u1,2020] + 88568.3256061*BuildProj[industrial_caborca_u1,2015] + 115476.169905*BuildProj[industrial_caborca_u1,2025] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 103742.356252*BuildProj[mexico_gcoradora_de_energia,2015] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2025] + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,3] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,3] ) + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,4] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,4] ) )
     SystemCostPerPeriod : Size=2, Index=PERIODS
         Key  : Expression
-        2020 : 4.12331111489 * ( 225102.259273 * BuildProj[mexico_gcoradora_de_energia,2020] + 115476.169905 * BuildProj[industrial_caborca_u1,2020] + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,1] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,1] ) + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,2] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,2] ) )
-        2025 : 3.230722151 * ( 115476.169905*BuildProj[industrial_caborca_u1,2025] + 115476.169905*BuildProj[industrial_caborca_u1,2020] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2025] + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,3] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,3] ) + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,4] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,4] ) )
+        2020 : 4.12331111489 * ( 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 103742.356252*BuildProj[mexico_gcoradora_de_energia,2015] + 115476.169905*BuildProj[industrial_caborca_u1,2020] + 88568.3256061*BuildProj[industrial_caborca_u1,2015] + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,1] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,1] ) + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,2] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,2] ) )
+        2025 : 3.230722151 * ( 115476.169905*BuildProj[industrial_caborca_u1,2020] + 88568.3256061*BuildProj[industrial_caborca_u1,2015] + 115476.169905*BuildProj[industrial_caborca_u1,2025] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 103742.356252*BuildProj[mexico_gcoradora_de_energia,2015] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2025] + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,3] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,3] ) + 4392*( 3.432 * DispatchProj[industrial_caborca_u1,4] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,4] ) )
     Total_Proj_Fixed_Costs_Annual : Size=2, Index=PERIODS
         Key  : Expression
-        2020 : 225102.259273 * BuildProj[mexico_gcoradora_de_energia,2020] + 115476.169905 * BuildProj[industrial_caborca_u1,2020]
-        2025 : 115476.169905*BuildProj[industrial_caborca_u1,2025] + 115476.169905*BuildProj[industrial_caborca_u1,2020] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2025]
+        2020 : 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 103742.356252*BuildProj[mexico_gcoradora_de_energia,2015] + 115476.169905*BuildProj[industrial_caborca_u1,2020] + 88568.3256061*BuildProj[industrial_caborca_u1,2015]
+        2025 : 115476.169905*BuildProj[industrial_caborca_u1,2020] + 88568.3256061*BuildProj[industrial_caborca_u1,2015] + 115476.169905*BuildProj[industrial_caborca_u1,2025] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2020] + 103742.356252*BuildProj[mexico_gcoradora_de_energia,2015] + 225102.259273*BuildProj[mexico_gcoradora_de_energia,2025]
     Total_Proj_Var_Costs_Hourly : Size=4, Index=TIMEPOINTS
         Key : Expression
           1 : 3.432 * DispatchProj[industrial_caborca_u1,1] + 3.05 * DispatchProj[mexico_gcoradora_de_energia,1]
@@ -534,15 +548,15 @@
     Enforce_Dispatch_Baseload_Flat : Size=0, Index=PROJ_DISPATCH_POINTS, Active=True
         Key : Lower : Body : Upper : Active
     Enforce_Dispatch_Upper_Limit : Size=8, Index=PROJ_DISPATCH_POINTS, Active=True
-        Key                                : Lower : Body                                                                                                                                                : Upper : Active
-              ('industrial_caborca_u1', 1) :  -Inf :                                                               DispatchProj[industrial_caborca_u1,1] - 0.945 * BuildProj[industrial_caborca_u1,2020] :   0.0 :   True
-              ('industrial_caborca_u1', 2) :  -Inf :                                                               DispatchProj[industrial_caborca_u1,2] - 0.945 * BuildProj[industrial_caborca_u1,2020] :   0.0 :   True
-              ('industrial_caborca_u1', 3) :  -Inf :                   DispatchProj[industrial_caborca_u1,3] - 0.945 * ( BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020] ) :   0.0 :   True
-              ('industrial_caborca_u1', 4) :  -Inf :                   DispatchProj[industrial_caborca_u1,4] - 0.945 * ( BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020] ) :   0.0 :   True
-        ('mexico_gcoradora_de_energia', 1) :  -Inf :                                                   DispatchProj[mexico_gcoradora_de_energia,1] - 0.936 * BuildProj[mexico_gcoradora_de_energia,2020] :   0.0 :   True
-        ('mexico_gcoradora_de_energia', 2) :  -Inf :                                                   DispatchProj[mexico_gcoradora_de_energia,2] - 0.936 * BuildProj[mexico_gcoradora_de_energia,2020] :   0.0 :   True
-        ('mexico_gcoradora_de_energia', 3) :  -Inf : DispatchProj[mexico_gcoradora_de_energia,3] - 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020] ) :   0.0 :   True
-        ('mexico_gcoradora_de_energia', 4) :  -Inf : DispatchProj[mexico_gcoradora_de_energia,4] - 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020] ) :   0.0 :   True
+        Key                                : Lower : Body                                                                                                                                                                                              : Upper : Active
+              ('industrial_caborca_u1', 1) :  -Inf :                                                                 DispatchProj[industrial_caborca_u1,1] - 0.945 * ( BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015] ) :   0.0 :   True
+              ('industrial_caborca_u1', 2) :  -Inf :                                                                 DispatchProj[industrial_caborca_u1,2] - 0.945 * ( BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015] ) :   0.0 :   True
+              ('industrial_caborca_u1', 3) :  -Inf :                         DispatchProj[industrial_caborca_u1,3] - 0.945 * ( BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015] ) :   0.0 :   True
+              ('industrial_caborca_u1', 4) :  -Inf :                         DispatchProj[industrial_caborca_u1,4] - 0.945 * ( BuildProj[industrial_caborca_u1,2025] + BuildProj[industrial_caborca_u1,2020] + BuildProj[industrial_caborca_u1,2015] ) :   0.0 :   True
+        ('mexico_gcoradora_de_energia', 1) :  -Inf :                                               DispatchProj[mexico_gcoradora_de_energia,1] - 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015] ) :   0.0 :   True
+        ('mexico_gcoradora_de_energia', 2) :  -Inf :                                               DispatchProj[mexico_gcoradora_de_energia,2] - 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015] ) :   0.0 :   True
+        ('mexico_gcoradora_de_energia', 3) :  -Inf : DispatchProj[mexico_gcoradora_de_energia,3] - 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015] ) :   0.0 :   True
+        ('mexico_gcoradora_de_energia', 4) :  -Inf : DispatchProj[mexico_gcoradora_de_energia,4] - 0.936 * ( BuildProj[mexico_gcoradora_de_energia,2025] + BuildProj[mexico_gcoradora_de_energia,2020] + BuildProj[mexico_gcoradora_de_energia,2015] ) :   0.0 :   True
     Enforce_Min_Build_Lower : Size=0, Index=NEW_PROJ_WITH_MIN_BUILD_YEARS, Active=True
         Key : Lower : Body : Upper : Active
     Enforce_Min_Build_Upper : Size=0, Index=NEW_PROJ_WITH_MIN_BUILD_YEARS, Active=True

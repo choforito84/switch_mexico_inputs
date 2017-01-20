@@ -8,4 +8,7 @@ for i in df4.index:
     df4.loc[i,'distribution']=float(df1.loc[i,'existing_local_td'])
     df4.loc[i,'generation']=df3[df3['proj_load_zone']==i]['proj_capacity_limit_mw'].sum()
     df4.loc[i,'peak_load']=df2.loc[i,'lz_demand_mw'].max()
+for name in df4.columns:
+    df4.loc['total',name]=df4[name].sum()
+df4['accomplish']=(df4['generation']>=df4['peak_load'])
 df4.to_csv('comparison.csv')
