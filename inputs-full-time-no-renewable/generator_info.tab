@@ -1,0 +1,16 @@
+generation_technology	g_max_age	g_min_build_capacity	g_scheduled_outage_rate	g_forced_outage_rate	g_is_resource_limited	g_is_variable	g_is_baseload	g_is_flexible_baseload	g_is_cogen	g_variable_o_m	g_energy_source	g_full_load_heat_rate	g_unit_size	g_ccs_capture_efficiency	g_ccs_energy_load	g_storage_efficiency	g_store_to_release_ratio
+bioenergy_diesel	20	0.0	0.071	0.071	0	0	1	0	0	3.94	diesel	133.5376368	.	.	.	.	.
+bioenergy_fuel_oil	20	0.0	0.071	0.071	0	0	1	0	0	3.94	fuel_oil 	83.73217977	.	.	.	.	.
+bioenergy_natural_gas	20	0.0	0.074	0.074	0	0	1	0	0	4.37	natural_gas	8.842015479	.	.	.	.	.
+carboelectric_coal	20	0.0	0.064	0.064	0	0	0	0	0	3.782	coal 	8.953724713	.	.	.	.	.
+combined_cycle_natural_gas	30	0.0	0.077	0.077	0	0	0	0	0	3.05	natural_gas	6.835968312	.	.	.	.	.
+fluidized_bed_coal	20	0.0	0.064	0.064	0	0	0	0	0	2.46	coal 	9.383886256	.	.	.	.	.
+gas_turbine_diesel	30	0.0	0.055	0.055	0	0	0	0	0	3.432	diesel	16.88270099	.	.	.	.	.
+gas_turbine_natural_gas	30	0.0	0.055	0.055	0	0	0	0	0	3.432	natural_gas	14.21509038	.	.	.	.	.
+internal_combustion_diesel	20	0.0	0.074	0.074	0	0	0	0	0	6.63	diesel	9.409293253	.	.	.	.	.
+internal_combustion_fuel_oil	20	0.0	0.074	0.074	0	0	0	0	0	6.63	fuel_oil 	9.681161912	.	.	.	.	.
+internal_combustion_natural_gas	30	0.0	0.074	0.074	0	0	0	0	0	6.63	natural_gas	9.142223828	.	.	.	.	.
+nuclear_uranium	60	1312.7	0.114	0.114	0	0	0	0	0	2.25	uranium 	9.780028982	.	.	.	.	.
+thermal_diesel	30	0.0	0.071	0.071	0	0	0	0	0	2.688	diesel	11.29409996	.	.	.	.	.
+thermal_fuel_oil	30	0.0	0.071	0.071	0	0	0	0	0	2.688	fuel_oil 	10.23841384	.	.	.	.	.
+thermal_natural_gas	30	0.0	0.071	0.071	0	0	0	0	0	2.688	natural_gas	15.08460654	.	.	.	.	.
