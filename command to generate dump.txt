@@ -1,0 +1,13 @@
+The following command runs switch and deposits bud-related information in a .log file.
+
+This command only works running switch with the CPLEX solver.
+
+
+
+Running it from python:
+
+python -m switch_mod.solve --verbose --solver=cplexamp --solver-options-string "iisfind=1" --log-run --stream-solver
+
+Using the switch command line tool:
+
+ switch solve --verbose --solver=cplexamp --solver-options-string "iisfind=1" --log-run --stream-solver

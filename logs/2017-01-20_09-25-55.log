@@ -1,0 +1,44 @@
+
+=======================================================================
+SWITCH model created in 0.02 s.
+Arguments:
+solver_options_string='iisfind=1', verbose=True, outputs_dir='outputs', solver='cplexamp', inputs_dir='inputs-no-renewable', tee=True, logs_dir='logs', log_run_to_file=True
+Modules:
+switch_mod, project.no_commit, switch_mod.solve
+=======================================================================
+
+Loading inputs...
+Inputs loaded in 0.71 s.
+
+Solving model...
+iisfind=1
+
+Refine conflict on 7742 members...
+
+ Iteration  Max Members  Min Members
+         1         7259            0
+         2         7017            0
+         3         6896            0
+         4         6866            0
+         5         6859            0
+         6         6857            0
+         7         5143            0
+         8         4286            0
+         9         3858            0
+        10         3644            0
+        11         3618            0
+        12         3612            0
+        13         3611            0
+        14            2            0
+        15            2            1
+        16            2            2
+CPLEX 12.7.0.0: integer infeasible.
+0 MIP simplex iterations
+0 branch-and-bound nodes
+Returning an IIS of 1 variables and 1 constraints.
+No basis.
+WARNING - Loading a SolverResults object with a warning status into model=unknown; message from solver=CPLEX 12.7.0.0\x3a integer infeasible.; 0 MIP simplex iterations; 0 branch-and-bound nodes; Returning an IIS of 1 variables and 1 constraints.; No basis.1	low	at lower bound; 2	fix	fixed; 3	upp	at upper bound; 4	mem	member; 5	pmem	possible member; 6	plow	possibly at lower bound; 7	pupp	possibly at upper bound; 8	bug; ; 28 1; suffix 1 1 4 0 0; iis; 3398 4; 
+Solved model. Total time spent in solver: 0.718270 s.
+WARNING - Loading a SolverResults object with a warning status into model=unknown; message from solver=CPLEX 12.7.0.0\x3a integer infeasible.; 0 MIP simplex iterations; 0 branch-and-bound nodes; Returning an IIS of 1 variables and 1 constraints.; No basis.1	low	at lower bound; 2	fix	fixed; 3	upp	at upper bound; 4	mem	member; 5	pmem	possible member; 6	plow	possibly at lower bound; 7	pupp	possibly at upper bound; 8	bug; ; 28 1; suffix 1 1 4 0 0; iis; 3398 4; 
+Model was infeasible; if the solver can generate an irreducible infeasible set,
+more information may be available by calling this script with --suffixes iis ...

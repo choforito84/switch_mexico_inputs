@@ -1,0 +1,18 @@
+
+=======================================================================
+SWITCH model created in 0.02 s.
+Arguments:
+solver_options_string='iisfind=1', verbose=True, outputs_dir='outputs', solver='glpk', inputs_dir='inputs-no-renewable', tee=True, logs_dir='logs', log_run_to_file=True
+Modules:
+switch_mod, project.no_commit, switch_mod.solve
+=======================================================================
+
+Loading inputs...
+Inputs loaded in 0.71 s.
+
+Solving model...
+Invalid option '--iisfind'; try /usr/bin/glpsol --help
+ERROR: "[base]/site-packages/pyomo/opt/base/solvers.py", 599, solve
+	Solver (glpk) returned non-zero return code (1)
+ERROR: "[base]/site-packages/pyomo/opt/base/solvers.py", 602, solve
+	See the solver log above for diagnostic information.
