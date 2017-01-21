@@ -1,0 +1,46 @@
+Generation check out using operational power plants from Generation/data/PowerPlants
+
+
+05-culiacan: hydroelectric plants supply a lot of energy
+
+08-moctezuma: no power plants
+
+13-nuevo_laredo: hydroelectric plant "falcon' supplies energy (32 MW) but not enough for load (201 MW)
+
+16-monterrey: "small" difference between generation and load (2641 MW generation vs 2855 MW load)
+
+17-saltillo: large difference between generation and load (466 MW generation vs  775 MW load)
+
+18-valles: only hydroelectric power plants
+
+21-guemez: wind plant helps with 20 MW but still a very large difference with load (20 MW generation vs 141 MW load)
+
+22-tepic: hydroelectric plant "aguamilpa_solidaridad" is fundamental to the load zone and system: 900 MW of capacity
+
+23-guadalajara: hydroelectric plants are fundamental to load zone and system:  1700 MW of capacity
+
+24-aguascalientes: large difference between generation and loads (50 MW gen vs 1174 MW load)
+
+28-carapan: hydroelectric plants are fundamental to load zone: 300 MW of capacity. Still, not enough to reach load (380 Generation vs 490 MW load)
+
+31-central: large difference between generation and load (3832 MW generation vs 6538 MW load)
+
+34-puebla: large difference between generation and load (510 MW generation vs 1300 MW load)
+
+35-acapulco: only hydroelectric power plants
+
+36-temascal: Hydroelectric power plants are fundamental to the system: 400 MW of capacity
+
+37-coatzacoalcos: hydroelectric power plant covers the samll difference between load and generation (30 MW < 10%)
+
+38-tabasco: hydroelectric power plant "penitas" is fundamental to the load zone: 420 MW of capacity
+ 
+39-grijalva: hydroelectric power plants is fundamental for the load zone and the system : 4000 MW of capacity
+
+40-ixtepec: only wind power plants
+
+43-cancun: large difference between generation and load (193 MW generation vs 353 MW load)
+
+47-ensenada: large difference between generation and load (27 MW generation vs 100 MW load)
+
+49-san_luis_rio_colorado: no power plants

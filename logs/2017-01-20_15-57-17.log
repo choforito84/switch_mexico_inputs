@@ -1,0 +1,16 @@
+
+=======================================================================
+SWITCH model created in 0.02 s.
+Arguments:
+verbose=True, outputs_dir='outputs', solver='cplex', inputs_dir='inputs-no-renewable', logs_dir='logs', log_run_to_file=True
+Modules:
+switch_mod, project.no_commit, switch_mod.solve
+=======================================================================
+
+Loading inputs...
+Inputs loaded in 0.76 s.
+
+Solving model...
+Solved model. Total time spent in solver: 0.676625 s.
+Model was infeasible; if the solver can generate an irreducible infeasible set,
+more information may be available by calling this script with --suffixes iis ...
